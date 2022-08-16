@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingFragment1">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/flamantez"
+        android:gravity="center"
+        android:text="What motivates you to quit smoking ?"
+        android:textColor="#00003f"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_go"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/my_button_bg"
+        android:fontFamily="@font/lamante"
+        android:text="Next"
+        android:textStyle="bold"
+        app:backgroundTint="#1FADED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+    <EditText
+        android:id="@+id/edt_getReason"
+        android:layout_width="280dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_background"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_baseline_edit_24"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="  Your movation"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_go"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageButton
+        android:id="@+id/btn_add"
+        android:layout_width="60dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/edit_text_background"
+        android:src="@drawable/ic_baseline_spellcheck_24"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_getReason"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edt_getReason"
+        app:layout_constraintTop_toTopOf="@+id/edt_getReason" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
